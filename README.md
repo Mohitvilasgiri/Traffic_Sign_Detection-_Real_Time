@@ -12,5 +12,34 @@ The max-pooling pooling layer which is used reduce the dimensions of the image. 
 
 The flatten layer which converts the 2-D data into a long 1-D vector of features for a fully connected layer that can be fed into the neural network.The last layer is the dense layer which is used as an output layer. The last layer has number of nodes same as the number of classes. The last dense layer uses SoftMax activation function. SoftMax function gives the probability value (between 0 and 1) so that the model can predict which class has the highest probability.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Literature Survey
+
+Extensive research has been done in the area of recognition and classification of traffic and road signs. The authors proposed a Convolutional Neural Network and Support Vector Machines (CNN-SVM) method for traffic signs recognition and classification. The coloring used in this method is YCbCr color space which is input to the convolutional neural network to divide the color channels and extracting some special characteristics. 
+Their proposed method achieved a 98.6% accuracy for traffic signs recognition and classification. In another model the authors developed a new dataset consisting of 100,000 images and also proposed a traffic sign detection and classification method based on a robust end-to-end CNN. The method achieved 84% accuracy. 
+The authors analyzed the spatial transformers and stochastic optimization methods for deep neural network for traffic sign recognition. They finalized this with a proposed system that achieved 99.71% accuracy. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Implementation:
+In this Project we create Traffic sign Detection Model. Using Traffic sign Detection Model, we can inform 
+the driver of the vehicle about the traffic sign coming ahead. 
+Project Setup 
+The dataset is plot into training, test and validation sets, with the following characteristics: 
+        • Images are 32 (width) x 32 (height) x 3 (RGB color channels) 
+        • Training set is composed of 34799 images 
+        • Validation set is composed of 4410 images 
+        • Test set is composed of 12630 images 
+        • There are 43 classes (e.g., Speed Limit 20km/h, No entry, bumpy road, etc.) Moreover, we 
+        will be using Python 3.7 with TensorFlow to write our code. 
+        
+### Pre-Processing :
+        1) Input the image.
+        2) Image Resizing:- One of the limitations of the CNN model is that they cannot be trained on a different
+        dimension of images. So, it is mandatory to have same dimension images in the dataset. 
+        We’ll check the dimension of all the images of the dataset so that we can process the images into having 
+        similar dimensions(32*32*3).
+        3) Image Grayscale: We convert our 3 Channel images into a single grayscale image.  
+        4) Image Equalization: - It standardize the lighting in a image. 
+        5) Image Normalization: - To Normalized Value between 0 and 1 instead of 0 to 255.
+
 
