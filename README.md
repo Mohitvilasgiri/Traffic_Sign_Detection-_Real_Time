@@ -25,14 +25,15 @@ In this Project we create Traffic sign Detection Model. Using Traffic sign Detec
 the driver of the vehicle about the traffic sign coming ahead. 
 Project Setup 
 The dataset is plot into training, test and validation sets, with the following characteristics: 
-        • Images are 32 (width) x 32 (height) x 3 (RGB color channels) 
-        • Training set is composed of 34799 images 
-        • Validation set is composed of 4410 images 
-        • Test set is composed of 12630 images 
-        • There are 43 classes (e.g., Speed Limit 20km/h, No entry, bumpy road, etc.) Moreover, we 
-        will be using Python 3.7 with TensorFlow to write our code. 
+           • Images are 32 (width) x 32 (height) x 3 (RGB color channels) 
+           • Training set is composed of 34799 images 
+           • Validation set is composed of 4410 images 
+           • Test set is composed of 12630 images 
+           • There are 43 classes (e.g., Speed Limit 20km/h, No entry, bumpy road, etc.) Moreover, we 
+              will be using Python 3.7 with TensorFlow to write our code. 
         
 ### Pre-Processing :
+
         1) Input the image.
         2) Image Resizing:- One of the limitations of the CNN model is that they cannot be trained on a different
         dimension of images. So, it is mandatory to have same dimension images in the dataset. 
@@ -41,5 +42,16 @@ The dataset is plot into training, test and validation sets, with the following 
         3) Image Grayscale: We convert our 3 Channel images into a single grayscale image.  
         4) Image Equalization: - It standardize the lighting in a image. 
         5) Image Normalization: - To Normalized Value between 0 and 1 instead of 0 to 255.
+        
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------### Model Architecture:
+
+For building the we will use sequential model from keras library. Then we will add the layers to make convolutional neural network. In the first 2 Conv2D layers we have used 32 filters and the kernel size is (5,5). In the MaxPool2D layer we have kept pool size (2,2) which means it will select the maximum value of every 
+2 x 2 area of the image. By doing this dimension of the image will reduce by factor of 2. In dropout layer we have kept dropout rate = 0.25 that means 25% of neurons are removed randomly. We apply these 3 layers again with some change in parameters. Then we apply flatten layer to convert 2-D data to 1-D vector. This layer is followed by dense layer, dropout layer and dense layer again. The last dense layer outputs 43 nodes as the traffic signs are divided into 43 categories in our dataset. This layer uses the SoftMax activation function which gives probability value and predicts which of the 43 options has the highest probability.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------### Apply the model and plot the graphs for accuracy and loss:
+We will compile the model and apply it using fit function. The batch size will be 32. Then we will plot the graphs for accuracy and loss. We got accuracy of 98.5%.
+![image](https://user-images.githubusercontent.com/66352630/126447117-996d3b14-fec8-4201-a664-9360aab979f4.png)
+
+
 
 
