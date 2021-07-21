@@ -1,6 +1,6 @@
 # Traffic_Sign_Detection-_Real_Time
 
-##Introduction:
+## Introduction:
 The automotive industry is one of the largest industries in the world. In 2019, ninety-two million motor vehicles were produced in the world, with the United States itself producing over 2.5 million automobiles.With the world moving towards self-driving vehicles, more than 80 companies are testing over 1400 of them in the United States alone. It was forecasted that there would be more than 10 million self-driving cars on road by 2020. This prediction was quite exciting but quite clearly, did not happen. There are numerous reasons behind it.
 
 In today’s world as the number of vehicles is increasing so are the road accidents and according to reports, India is on 1st spot in the greatest number of accidents in a country. This is caused due to many reasons such as poor enforcement of laws, carelessness, etc. One of the reasons is that people don’t recognize or follow 
