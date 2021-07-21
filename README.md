@@ -68,7 +68,9 @@ For building the we will use sequential model from keras library. Then we will a
 
 ![image](https://user-images.githubusercontent.com/66352630/126507794-9cf333a8-af75-4a80-9905-ccaf85a08ab0.png)
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------### Apply the model and plot the graphs for accuracy and loss:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Apply the model and plot the graphs for accuracy and loss:
 We will compile the model and apply it using fit function. The batch size will be 32. Then we will plot the graphs for accuracy and loss. We got accuracy of 98.5%.
 
 ![image](https://user-images.githubusercontent.com/66352630/126447388-a3e59aa3-a2af-45d1-b6a3-a57a94034a1e.png)
